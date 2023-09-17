@@ -46,6 +46,32 @@ class HomeScreen extends StatelessWidget {
                 onPressed: (){
               print('U mail sent');
             }, child:Text("Send mail") ),
+            TextButton(
+                style: TextButton.styleFrom(
+                  
+                ),
+                onPressed: (){}, child:
+            Text('Yasin')
+
+            ),
+            IconButton(onPressed: (){}, icon:Icon(Icons.add) ),
+            OutlinedButton(onPressed: (){}, child: Text('Erooooooo')),
+            const TextField(
+              style: TextStyle(color: Colors.red),
+
+              decoration: InputDecoration(
+
+
+                fillColor: Colors.cyanAccent,
+                filled: true,
+                hintText: 'rwgrh',
+                hintStyle: TextStyle(color: Colors.amberAccent),
+                suffixIcon: Icon(Icons.email_outlined)
+
+
+              ),
+
+            )
 
           ],
         ),
