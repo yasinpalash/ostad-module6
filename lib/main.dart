@@ -64,7 +64,7 @@ class HomeScreen extends StatelessWidget {
 
                 fillColor: Colors.cyanAccent,
                 filled: true,
-                hintText: 'rwgrh',
+                hintText: 'rwsdfdgfhgrh',
                 hintStyle: TextStyle(color: Colors.amberAccent),
                 suffixIcon: Icon(Icons.email_outlined)
 
