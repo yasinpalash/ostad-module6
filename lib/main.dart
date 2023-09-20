@@ -13,10 +13,33 @@ class ClassTwo extends StatelessWidget {
           centerTitle: true,
           title: const Text("Home"),
         ),
-        body:Column(children: [
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              GestureDetector(
+                onTap: () {
+                  print('Hit');
+                },
+                child: Text(
+                  'Yasin',
+                  style: TextStyle(fontSize: 50),
+                ),
+              ),
 
+              InkWell(
+                onTap: (){
 
-        ],),
+                },
+
+                child: Text(
+                  'Yasin',
+                  style: TextStyle(fontSize: 50),
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
