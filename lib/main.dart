@@ -14,17 +14,35 @@ class ClassTwo extends StatelessWidget {
           title: const Text("Home"),
         ),
         body: Scrollbar(
-          thickness: 20,
-          child: GridView(
+          thickness: 40,
+           radius: Radius.circular(30),
 
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-            children: [
-              Icon(Icons.confirmation_number_sharp),
-              Icon(Icons.confirmation_number_sharp),
+           child:
+            ListView.builder(
+              itemCount: 50,
+
+              itemBuilder: (BuildContext context, int index) {
 
 
-            ],
-          ),
+              return ListTile(
+                title: Text('item list $index'),
+              );
+            },
+
+            )
+          // GridView.builder(
+          //   itemCount: 5,
+          //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          //       crossAxisCount: 2),
+          //   itemBuilder: (BuildContext context, int index) {
+          //     return Column(
+          //       children: [
+          //         Text(index.toString()),
+          //         const Icon(Icons.confirmation_number_sharp),
+          //       ],
+          //     );
+          //   },
+          // ),
         ),
       ),
     );
