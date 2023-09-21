@@ -18,7 +18,7 @@ class ClassTwo extends StatelessWidget {
            radius: Radius.circular(30),
 
            child:
-            ListView.builder(
+            ListView.separated(
               itemCount: 50,
 
               itemBuilder: (BuildContext context, int index) {
@@ -28,6 +28,10 @@ class ClassTwo extends StatelessWidget {
                 title: Text('item list $index'),
               );
             },
+              separatorBuilder: (context,index){
+
+                return Divider();
+              },
 
             )
           // GridView.builder(
