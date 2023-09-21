@@ -1,54 +1,66 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(ClassTwo());
+  runApp(MyApp());
 }
 
-class ClassTwo extends StatelessWidget {
+
+class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: const Text("Home"),
-        ),
-        body: Scrollbar(
-          thickness: 40,
-           radius: Radius.circular(30),
 
-           child:
-            ListView.separated(
-              itemCount: 50,
+      home: HomeScreen(),
 
-              itemBuilder: (BuildContext context, int index) {
+    );
+  }
+
+  
+
+}
 
 
-              return ListTile(
-                title: Text('item list $index'),
-              );
-            },
-              separatorBuilder: (context,index){
+class HomeScreen extends StatelessWidget {
 
-                return Divider();
-              },
+  List<String> Students=[
+    'Yasin',
+    'polASH',
+    'Yasin',
+    'polASH',
+    'Yasin',
+    'polASH',
+    'Yasin',
+    'polASH',
 
-            )
-          // GridView.builder(
-          //   itemCount: 5,
-          //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          //       crossAxisCount: 2),
-          //   itemBuilder: (BuildContext context, int index) {
-          //     return Column(
-          //       children: [
-          //         Text(index.toString()),
-          //         const Icon(Icons.confirmation_number_sharp),
-          //       ],
-          //     );
-          //   },
-          // ),
+
+
+  ];
+  @override
+  Widget build(BuildContext context) {
+
+    // TODO: implement build
+    return Scaffold(
+      appBar: AppBar(title: Text('Home'),),
+
+      body: Scrollbar(
+        thickness: 20,
+        radius: Radius.circular(15),
+        child:ListView.separated(
+          itemCount: Students.length,
+          itemBuilder: (context,index){
+            return ListTile(
+              title: Text(Students[index]),
+            );
+          },
+          separatorBuilder: (context,index){
+            return Divider();
+          },
         ),
       ),
     );
   }
+
+
+
 }
